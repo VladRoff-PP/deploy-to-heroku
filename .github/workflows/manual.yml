@@ -33,5 +33,5 @@ jobs:
       run: git status
     - name: git remote
       run: git remote
-    - name: git push
-      run: git push
+    - name: Deploy to Staging
+      run: git push --force origin main:deploy-staging
