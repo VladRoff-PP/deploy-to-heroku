@@ -1,0 +1,13 @@
+name: Deploy to Production
+on:
+  release:
+    types:
+      - published
+jobs:
+  Deploy-to-Staging:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy to Production
+      # GITHUB_REF contains the git tag of the release
+      run: git push --force origin $GITHUB_REF:deploy-to-production
