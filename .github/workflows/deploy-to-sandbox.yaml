@@ -1,0 +1,15 @@
+name: Deploy to Sandbox
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Deploy-to-Staging:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: env
+      run: env
+    - name: Deploy to Sandbox
+      # GITHUB_REF contains the git tag of the release
+      run: echo "deploy to sandbox"
