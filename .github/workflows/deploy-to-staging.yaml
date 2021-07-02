@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: git log
+      run: git log
+    - name: git status
+      run: git status
     - name: git remote
       run: git remote -v
     - name: Deploy to Staging
