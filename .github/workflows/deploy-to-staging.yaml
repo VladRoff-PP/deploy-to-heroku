@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: env
+      run: env
     - name: Deploy to Staging
       # GITHUB_REF contains the git tag of the release
       run: git push --force origin $GITHUB_REF:deploy-to-staging
