@@ -1,13 +1,13 @@
 name: Deploy to Staging
 on:
-  release:
-    types:
-      - created
+  bush:
+    branches:
+      - main
 jobs:
   Deploy-to-Staging:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Deploy to Staging
-      # GITHUB_REF stores the release git tag
+      # GITHUB_REF contains the git tag of the release
       run: git push --force origin $GITHUB_REF:deploy-to-staging
