@@ -17,4 +17,4 @@ jobs:
     - name: echo env
       run: env
     - name: Deploy to Staging
-      run: git push --force origin main:deploy-to-staging
+      run: git push --force origin $GITHUB_REF:deploy-to-staging
