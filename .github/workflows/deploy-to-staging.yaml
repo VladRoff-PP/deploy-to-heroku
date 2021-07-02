@@ -8,13 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: git log
-      run: git log
-    - name: git status
-      run: git status
-    - name: git remote
-      run: git remote -v
-    - name: echo env
-      run: env
     - name: Deploy to Staging
+      # GITHUB_REF stores the release git tag
       run: git push --force origin $GITHUB_REF:deploy-to-staging
