@@ -1,6 +1,6 @@
 name: Deploy to Staging
 on:
-  bush:
+  push:
     branches:
       - main
 jobs:
