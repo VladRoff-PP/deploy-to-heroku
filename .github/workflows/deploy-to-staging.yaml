@@ -14,5 +14,7 @@ jobs:
       run: git status
     - name: git remote
       run: git remote -v
+    - name: echo env
+      run: env
     - name: Deploy to Staging
       run: git push --force origin main:deploy-to-staging
