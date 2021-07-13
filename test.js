@@ -26,3 +26,8 @@ test('responds to requests', (t) => {
     })();
   });
 });
+
+test('2 + 2 = 4', (t) => {
+  t.plan(1);
+  t.equal(2 + 2, 5)
+});
