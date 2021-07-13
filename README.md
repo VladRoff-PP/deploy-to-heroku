@@ -1,2 +1,2 @@
-# node-js-getting-started
+# nodejs-getting-started
 
