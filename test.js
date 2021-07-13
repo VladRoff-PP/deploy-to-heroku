@@ -21,7 +21,7 @@ test('responds to requests', (t) => {
       // Successful response
       t.equal(response.statusCode, 200);
       // Assert content checks
-      t.notEqual(response.body.indexOf("<title>Hello ProducePay People!</title>"), -1);
+      t.notEqual(response.body.indexOf("<title>Hello ProducePay People</title>"), -1);
       t.notEqual(response.body.indexOf("Hello ProducePay People!"), -1);
     })();
   });
